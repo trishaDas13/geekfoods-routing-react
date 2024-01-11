@@ -1,0 +1,31 @@
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 3rem;
+    align-items: center;
+}
+.card_quote{
+    background-color: rgb(31,41,55);
+    width: 90%;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+}
+.card_quote h1{
+    font-size: 22px;
+}
+.card_quote p{
+    font-size: 18px;
+    padding-top: 1rem;
+    color: rgb(156,163,175);
+}
+@media screen and (max-width: 768px) {
+    .card_quote{
+        width: 100%;
+    }
+    .card_quote h1{
+        font-size: 22px;
+    }
+}

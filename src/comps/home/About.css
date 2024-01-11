@@ -1,0 +1,108 @@
+.card img{
+    width: 50%;
+    height: 450px;
+    position: absolute;
+    left: 40px;
+    z-index: 1;
+}
+.card-content{
+    width: 50%;
+    height: 650px;
+    background-color: rgb(243,244,246);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding-left: 6rem;
+    float: right;
+    position: absolute;
+    right: 30px;
+    top: 50px;
+    
+}
+.card-content h2{
+    font-size: 30px;
+    width: 80%;
+}
+.card-content p{
+    color: RGB(75, 85, 99);
+    font-size:16px;
+    line-height:24px;
+    margin:16px 0px 0px;
+    font-weight:400;
+    text-align:start;
+    width: 80%;
+}
+.card-content button{
+    padding: 0.8rem 2.8rem;
+    margin-top: 2rem;
+    background-color: rgb(79,70,229);
+    border: 1px solid rgb(79,70,229);
+    color: white;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+.card-content button:hover{
+    background: transparent;
+    color: rgb(79,70,229);
+}
+.card{
+    padding: 2rem;
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+
+}
+.cardReview{
+    padding: 4rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+.reviewCard .review{
+    background-color: rgb(249,250,251);
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 350px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    margin-bottom: 1.5rem;
+}
+.image img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.profile{
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.profileOwner .name{
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1288px) {
+    .card img, .card-content{
+        position: static;
+        width: 100%;
+    }
+    .card{
+        gap: 0;
+        height: auto;
+    }
+    .card-content{
+        padding: 2rem 0;
+        height:auto;
+    }
+}
