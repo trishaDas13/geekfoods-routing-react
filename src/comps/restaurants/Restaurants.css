@@ -1,0 +1,80 @@
+.card_restaurants{
+    border: 1px dashed black;
+    border-radius: 10px;
+    width: 400px;
+    background-color: white;
+}
+.card_restaurants:hover{
+    cursor: pointer;
+    box-shadow: 5px 5px 20px rgba(0,0,0,.8);
+}
+.location, .outcode{
+    font-size: 14px;
+    color: grey;
+}
+.rating{
+    color: rgb(76, 218, 33);
+}
+.menuArea{
+    padding: 1rem;
+    float: bottom;
+    background-color: rgba(190, 187, 187, 0.575);
+    margin-top: 2rem;
+}
+.nameArea{
+    padding: 1rem;
+}
+.type{
+    font-weight: 700;
+}
+.cardContainer{
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px
+}
+.inputField{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+input{
+    padding: 5px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #24292e;
+    vertical-align: middle;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    outline: none;
+    margin-left: 1rem;
+}
+input:focus{
+    border-color: #0366d6;
+    outline: none;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+label{
+    font-weight: 600;
+}
+.nameFilter input{
+    width: 220px;
+}
+@media screen and (max-width: 480px) {
+    .inputField{
+        padding: 0.7rem;
+    }
+    label{
+        display: none;
+    }
+}
