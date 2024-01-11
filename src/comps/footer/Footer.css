@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-direction: column;
+    background-color: rgb(243,244,246);
+    padding: 4rem 0;
+    
+}
+footer p{
+    color: RGB(107, 114, 128);
+    text-align: center;
+}
+footer ul{
+    gap: 50px;
+}
+ul li{
+    color: rgb(63, 62, 62);
+}
+ul li:hover{
+    color: rgba(63, 62, 62, 0.644);
+    cursor: pointer;
+}
+ul li i{
+    font-size: 22px;
+}
+.icon{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.icon p{
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: rgb(13,150,127);
+}
