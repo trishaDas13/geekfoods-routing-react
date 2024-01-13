@@ -15,16 +15,19 @@ footer p{
     text-align: center;
 }
 footer ul{
+    display: flex;
     gap: 50px;
 }
-ul li{
+footer ul li{
+    list-style-type: none;
     color: rgb(63, 62, 62);
-}4
-ul li:hover{
+    font-weight: 600;
+}
+footer ul li:hover{
     color: rgba(63, 62, 62, 0.644);
     cursor: pointer;
 }
-ul li i{
+footer ul li i{
     font-size: 22px;
 }
 .icon{
@@ -36,4 +39,12 @@ ul li i{
     letter-spacing: 2px;
     font-weight: 700;
     color: rgb(13,150,127);
+}
+@media screen and (max-width: 775px){
+    footer ul{
+        display: none;
+    }
+    footer p{
+        margin-bottom: 2rem;
+    }
 }

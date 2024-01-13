@@ -1,10 +1,12 @@
 import './Header.css';
 import logo from '../../assets/logo.svg';
 import { Link } from "react-router-dom";
+import Responsive from './Responsive';
 
 function Navbar(){
     return(
-        <nav>
+       <>
+             <nav>
             <div className="logo">
                 <img src={logo} alt="logo" />
                 <h2>GeekFoods</h2>
@@ -20,6 +22,8 @@ function Navbar(){
             </div>
             <button>Get Started</button>
         </nav>
+        <Responsive/>
+       </>
     );
 }
 

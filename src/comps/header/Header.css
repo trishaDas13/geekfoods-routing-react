@@ -16,14 +16,14 @@ nav{
     align-items: center;
     gap: 15px;
 }
-ul{
+.menus ul{
     display: flex;
     gap: 30px;
 }
-ul li{
+.menus ul li, .Responsive_menus ul li{
     list-style-type: none;
 }
-ul li a{
+.menus ul li a{
     text-decoration: none;
     color: white;
     font-weight: 600;
@@ -31,7 +31,7 @@ ul li a{
 li:first-child a{
     color: rgb(47,130,246);
 }
-ul li a:hover{
+.menus ul li a:hover{
     color: rgb(47,130,246);
 }
 nav button{
@@ -49,9 +49,40 @@ nav button{
 nav button:hover{
     background-color: rgb(35, 84, 190);
 }
+.Responsive_menus{
+    background-color: rgb(253, 253, 253);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    display: none;
+    box-shadow: 0 0 10px rgb(54, 54, 54);
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+.Responsive_menus a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
 
 @media screen and (max-width: 775px) {
-    ul{
+    .menus ul{
         display: none;
+    }
+    .Responsive_menus ul{
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+    }
+    .Responsive_menus{
+        display: inline;
+    }
+}
+@media screen and (max-width: 435px){
+    .Responsive_menus ul{
+        width: 300px;
+        gap: 15px;
+        margin: auto;
     }
 }
