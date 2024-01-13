@@ -1,0 +1,61 @@
+.foods {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+  .food_card {
+    width: 100%;
+    max-width: 280px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    padding: 2rem;
+    border-radius: 10px;
+    gap: 15px;
+  }
+  
+  .food_card h4 {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .food_card img {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 3px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: 0.3s ease-in-out;
+  }
+  .food_card img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  .food_card .catagory {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .food_card .catagory button {
+    outline: none;
+    background: none;
+    border: 2px solid rgb(37, 99, 235);
+    padding: 0.19rem 0.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .food_card .catagory button:hover {
+    color: white;
+    font-weight: 600;
+    background-color: rgb(37, 99, 235);
+  }
+  

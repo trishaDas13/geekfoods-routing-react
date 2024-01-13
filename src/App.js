@@ -5,8 +5,9 @@ import Foods from './comps/foods/Foods';
 import Contact from './comps/contact/Contact';
 import Layout from './comps/Layout';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Details from './comps/foods/Details'
 
-function App() {
+function App(mealData) {
 
   const router = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ function App() {
         {
           path: "/foods",
           element: <Foods/>
+        },
+        {
+          path: "/foods/:foodID",
+          element: <Details/>
         },
         {
           path: "/contact",
