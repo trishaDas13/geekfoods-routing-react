@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import  axios  from 'axios';
-import { nanoid } from 'nanoid';
+import  FoodContext  from '../../context/FoodContext';
 import './Foods.css';
+import { Link, useParams } from 'react-router-dom';
 
 function Foods() {
-
-  const [foodArray, setFoodArray] = useState();
+  let foodData = useContext(FoodContext);
+  const params = useParams();
+  console.log(foodData);
 
   async function fetchAPI() {
     let res = await axios.get('https://www.themealdb.com/api/json/v1/1/search.php?f=b');
-    setFoodArray(res.data.meals);
+    foodData.setFoodsData(res.data.meals);
   }
   useEffect(() => {
     fetchAPI();
@@ -17,15 +19,15 @@ function Foods() {
   
   return (
     <section className='foods'>
-      { foodArray && 
-        foodArray.map((food) =>{
+      { foodData.foodsData && 
+        foodData.foodsData.map((food) =>{
           return(
             <article key={food.idMeal} className="food_card">
               <img src={food.strMealThumb} alt={food.strTags}/>
               <h4>{food.strMeal}</h4>
               <div className="catagory">
                 <p>{food.strCategory}</p>
-                <button>View Recipe</button>
+                <button><Link to = {`/foods/:${food.idMeal}`}>View Recipe</Link></button>
               </div>
             </article>
           );

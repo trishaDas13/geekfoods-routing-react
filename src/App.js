@@ -1,3 +1,4 @@
+import React, { useEffect, useState, useContext } from 'react';
 import Home from './comps/home/Home';
 import Quote from './comps/quote/Quote';
 import Restaurants from './comps/restaurants/Restaurants';
@@ -5,9 +6,13 @@ import Foods from './comps/foods/Foods';
 import Contact from './comps/contact/Contact';
 import Layout from './comps/Layout';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Details from './comps/foods/Details'
+import Details from './comps/foods/Details';
+import FoodProvider from './context/FoodContext';
 
-function App(mealData) {
+function App() {
+
+  const [foodsData, setFoodsData] = useState([]);
+
 
   const router = createBrowserRouter([
     {
@@ -44,9 +49,9 @@ function App(mealData) {
 
 
   return (
-    <div className="App">
+    <FoodProvider.Provider value={{ foodsData, setFoodsData }}>
        <RouterProvider router={router} />
-    </div>
+    </FoodProvider.Provider>
   );
 }
 
