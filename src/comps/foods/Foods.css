@@ -71,6 +71,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
   .recipe_container{
     display: flex;
@@ -100,9 +101,12 @@
     box-shadow: 0 0 10px grey;
     margin: 2rem;
     border-radius: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .instruction{
-    width: 650px; 
+    width: 100%; 
+    max-width: 650px;
     cursor: text;   
   }
   .recipe_container_right{
@@ -177,3 +181,11 @@
     }
   }
       
+@media  screen and (max-width: 500px) {
+  .instruction{ 
+    max-width: 350px;
+  }
+  .recipe_container_left{
+    width: 250px;
+  }
+}
