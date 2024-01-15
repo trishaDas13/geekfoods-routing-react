@@ -10,7 +10,7 @@ function Details() {
     
   //todo: finding specific value for URL
     const foodDetails = foodData.foodsData.find((food) => food.idMeal === params.foodID);
-
+    window.scrollTo(0, 0);
  
   return (
     <section className="recipeDetails">
