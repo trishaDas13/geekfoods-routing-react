@@ -5,7 +5,7 @@ import Restaurants from './comps/restaurants/Restaurants';
 import Foods from './comps/foods/Foods';
 import Contact from './comps/contact/Contact';
 import Layout from './comps/Layout';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, useLocation } from "react-router-dom";
 import Details from './comps/foods/Details';
 import FoodProvider from './context/FoodContext';
 
@@ -13,6 +13,11 @@ function App() {
 
   const [foodsData, setFoodsData] = useState([]);
 
+  // useEffect(() => {
+  //   window.scrollTo(0,0);
+  // })
+  
+  
 
   const router = createBrowserRouter([
     {
